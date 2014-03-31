@@ -34,12 +34,13 @@ var answers = ['knock off', 'tighten', 'splash', 'rip off', 'set back', 'pick up
 		
 		function hightlightWrong(index){
 			var selectTag = document.getElementById('answer'+index);
-				selectTag.style.textDecoration = "line-through";
-				selectTag.style.color = 'red';
-				selectTag.disabled = true;
+			selectTag.style.textDecoration = "line-through";
+			selectTag.style.color = 'red';
+			selectTag.disabled = true;
 		}
 		
 		function hightlightRight(index){
 			var selectTag = document.getElementById('answer'+index);
 			selectTag.style.color = 'green';
+			selectTag.disabled = true;
 		}
