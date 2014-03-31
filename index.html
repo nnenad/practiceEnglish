@@ -1,79 +1,193 @@
-<!DOCTYPE html>
 <html>
+<head>
+	<style>
+		.answer{
+			visibility: hidden;
+			margin-bottom:15px;
+		}
+		.words{
+			margin-left: 15px;
+		}
+		.task{
+			margin-bottom: 5px;
+		}
+		
+		#again{
+			visibility: hidden;
+		}
+		
+	</style>
+	<script>
+		function showAnswers(){
+			var answers = document.getElementsByClassName('answer');
+			for(var i=0; i < answers.length; i++){
+				answers[i].style.visibility = 'visible';
+			}
+			hightLightAnwers();
+			document.getElementById('check').style.visibility = 'hidden';
+			document.getElementById('again').style.visibility = 'visible';
+		};
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Practiceenglish : " />
+		function hightLightAnwers(){
+			var answer1 = 'knock off';
+			var answer2 = 'tighten';
+			var answer3 = 'splash';
+			var answer4 = 'rip off';
+			var answer5 = 'set back';
+			var answer6 = 'pick up';
+			
+			var select1 = document.getElementById('answer1');
+			var yAnswer1 = select1.options[select1.selectedIndex].text;
+			
+			var select2 = document.getElementById('answer2');
+			var yAnswer2 = select2.options[select2.selectedIndex].text;
+			
+			var select3 = document.getElementById('answer3');
+			var yAnswer3 = select3.options[select3.selectedIndex].text;
+			
+			var select4 = document.getElementById('answer4');
+			var yAnswer4 = select4.options[select4.selectedIndex].text;
+			
+			var select5 = document.getElementById('answer5');
+			var yAnswer5 = select5.options[select5.selectedIndex].text;
+			
+			var select6 = document.getElementById('answer6');
+			var yAnswer6 = select6.options[select6.selectedIndex].text;
+			
+			if(yAnswer1 != answer1){
+				select1.style.textDecoration = "line-through";
+				select1.style.color = 'red';
+			}else{
+				select1.style.color = 'green';
+			}
+			
+			
+			if(yAnswer2 != answer2){
+				select2.style.textDecoration = "line-through";
+				select2.style.color = 'red';
+			}else{
+				select2.style.color = 'green';
+			}
+			
+			if(yAnswer3 != answer3){
+				select3.style.textDecoration = "line-through";
+				select3.style.color = 'red';
+			}else{
+				select3.style.color = 'green';
+			}
+			
+			if(yAnswer4 != answer4){
+				select4.style.textDecoration = "line-through";
+				select4.style.color = 'red';
+			}else{
+				select4.style.color = 'green';
+			}
+			
+			if(yAnswer5 != answer5){
+				select5.style.textDecoration = "line-through";
+				select5.style.color = 'red';
+			}else{
+				select5.style.color = 'green';
+			}
+			
+			if(yAnswer6 != answer6){
+				select6.style.textDecoration = "line-through";
+				select6.style.color = 'red';
+			}else{
+				select6.style.color = 'green';
+			}
+		}
+	</script>
+</head>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<body>
+	<div><span><b>Fill in the following words in the definitions below:</b></span></div>
+	<div class="task"> <b class='words'>pick up</b>  <b class='words'>knock off</b> <b class='words'>tighten</b>  <b class='words'>rip off</b> <b class='words'>set back</b> <b class='words'>splash</b></div>
+	<div clss="question"> <span>1. If you reduce the price of something you <select id="answer1">
+			<option value="pickUp">pick up</option>
+			<option value="knockOff">knock off</option>
+			<option value="tighten">tighten</option>
+			<option value="ripOff">rip off</option>
+			<option value="setBack">set back</option>
+			<option value="splash">splash</option>
+			</select> a few pounds.</span>
 
-    <title>Practiceenglish</title>
-  </head>
+	</div>
+	
+	<div class="answer"> <span>If you reduce the price of something you <b>konck off</b> a few pounds</span>
+	</div>
+	
+	<div clss="question"> <span>2. If something is loose, you need to <select id="answer2">
+			<option value="pickUp">pick up</option>
+			<option value="knockOff">knock off</option>
+			<option value="tighten">tighten</option>
+			<option value="ripOff">rip off</option>
+			<option value="setBack">set back</option>
+			<option value="splash">splash</option>
+			</select> it.</span>
 
-  <body>
+	</div>
+	
+	<div class="answer"> <span>If something is loose, you need to <b>tighten</b> it.</span>
+	</div>
+	
+	<div clss="question"> <span>3. Children like to <select id="answer3">
+			<option value="pickUp">pick up</option>
+			<option value="knockOff">knock off</option>
+			<option value="tighten">tighten</option>
+			<option value="ripOff">rip off</option>
+			<option value="setBack">set back</option>
+			<option value="splash">splash</option>
+			</select> each other with water when they go swimming.</span>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/nnenad/practiceEnglish">View on GitHub</a>
+	</div>
+	
+	<div class="answer"> <span>Children like to <b>splash</b> each other with water when they go swimming.</span>
+	</div>
+	
+	<div clss="question"> <span>4. When children receive birthday presents, they usually  <select id="answer4">
+			<option value="pickUp">pick up</option>
+			<option value="knockOff">knock off</option>
+			<option value="tighten">tighten</option>
+			<option value="ripOff">rip off</option>
+			<option value="setBack">set back</option>
+			<option value="splash">splash</option>
+			</select> the paper to see what's inside.</span>
 
-          <h1 id="project_title">Practiceenglish</h1>
-          <h2 id="project_tagline"></h2>
+	</div>
+	
+	<div class="answer"> <span>When children receive birthday presents, they usually  <b>rip off</b> the paper to see what's inside.</span>
+	</div>
+	
+	
+	<div clss="question"> <span>5. If your progress is delayed, for example, doing a project at work, you are <select id="answer5">
+			<option value="pickUp">pick up</option>
+			<option value="knockOff">knock off</option>
+			<option value="tighten">tighten</option>
+			<option value="ripOff">rip off</option>
+			<option value="setBack">set back</option>
+			<option value="splash">splash</option>
+			</select>.</span>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/nnenad/practiceEnglish/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/nnenad/practiceEnglish/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+	</div>
+	
+	<div class="answer"> <span>If your progress is delayed, for example, doing a project at work, you are <b>set back</b>.</span>
+	</div>
+	
+	<div clss="question"> <span>6. If you drop something, you have to <select id="answer6">
+			<option value="pickUp">pick up</option>
+			<option value="knockOff">knock off</option>
+			<option value="tighten">tighten</option>
+			<option value="ripOff">rip off</option>
+			<option value="setBack">set back</option>
+			<option value="splash">splash</option>
+			</select> it.</span>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Practiceenglish maintained by <a href="https://github.com/nnenad">nnenad</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+	</div>
+	
+	<div class="answer"> <span>If you drop something, you have to <b>pick</b> it <b>up</b>.</span>
+	</div>
+	
+	<button id="check" onclick="showAnswers()">check answers</button> <button id="again" onclick="location.reload();"> again </button>
+</body>
 </html>
