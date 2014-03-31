@@ -17,86 +17,7 @@
 		}
 		
 	</style>
-	<script>
-		function showAnswers(){
-			var answers = document.getElementsByClassName('answer');
-			for(var i=0; i < answers.length; i++){
-				answers[i].style.visibility = 'visible';
-			}
-			hightLightAnwers();
-			document.getElementById('check').style.visibility = 'hidden';
-			document.getElementById('again').style.visibility = 'visible';
-		};
-
-		function hightLightAnwers(){
-			var answer1 = 'knock off';
-			var answer2 = 'tighten';
-			var answer3 = 'splash';
-			var answer4 = 'rip off';
-			var answer5 = 'set back';
-			var answer6 = 'pick up';
-			
-			var select1 = document.getElementById('answer1');
-			var yAnswer1 = select1.options[select1.selectedIndex].text;
-			
-			var select2 = document.getElementById('answer2');
-			var yAnswer2 = select2.options[select2.selectedIndex].text;
-			
-			var select3 = document.getElementById('answer3');
-			var yAnswer3 = select3.options[select3.selectedIndex].text;
-			
-			var select4 = document.getElementById('answer4');
-			var yAnswer4 = select4.options[select4.selectedIndex].text;
-			
-			var select5 = document.getElementById('answer5');
-			var yAnswer5 = select5.options[select5.selectedIndex].text;
-			
-			var select6 = document.getElementById('answer6');
-			var yAnswer6 = select6.options[select6.selectedIndex].text;
-			
-			if(yAnswer1 != answer1){
-				select1.style.textDecoration = "line-through";
-				select1.style.color = 'red';
-			}else{
-				select1.style.color = 'green';
-			}
-			
-			
-			if(yAnswer2 != answer2){
-				select2.style.textDecoration = "line-through";
-				select2.style.color = 'red';
-			}else{
-				select2.style.color = 'green';
-			}
-			
-			if(yAnswer3 != answer3){
-				select3.style.textDecoration = "line-through";
-				select3.style.color = 'red';
-			}else{
-				select3.style.color = 'green';
-			}
-			
-			if(yAnswer4 != answer4){
-				select4.style.textDecoration = "line-through";
-				select4.style.color = 'red';
-			}else{
-				select4.style.color = 'green';
-			}
-			
-			if(yAnswer5 != answer5){
-				select5.style.textDecoration = "line-through";
-				select5.style.color = 'red';
-			}else{
-				select5.style.color = 'green';
-			}
-			
-			if(yAnswer6 != answer6){
-				select6.style.textDecoration = "line-through";
-				select6.style.color = 'red';
-			}else{
-				select6.style.color = 'green';
-			}
-		}
+	<script src="myFunctions.js">
 	</script>
 </head>
 
@@ -114,7 +35,7 @@
 
 	</div>
 	
-	<div class="answer"> <span>If you reduce the price of something you <b>konck off</b> a few pounds</span>
+	<div class="answer"> <span>If you reduce the price of something you <b>konck off</b> a few pounds.</span>
 	</div>
 	
 	<div clss="question"> <span>2. If something is loose, you need to <select id="answer2">
